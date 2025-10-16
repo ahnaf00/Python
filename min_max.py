@@ -1,19 +1,28 @@
-li = input()
-nums = li.split()
-x = int(nums[0])
-y = int(nums[1])
-z = int(nums[2])
+# li = input()
+# nums = li.split()
+# x = int(nums[0])
+# y = int(nums[1])
+# z = int(nums[2])
+#
+# mn = x
+# if mn > y:
+#     mn = y
+# if mn > z:
+#     mn = z
+#
+# mx = x
+# if mx < y:
+#     mx = y
+# if mx < z:
+#     mx = z
+#
+# print(mn, mx)
 
-mn = x
-if mn > y:
-    mn = y
-if mn > z:
-    mn = z
+from functools import reduce
+n = int(input())
+nums = list(map(int, input().split()))
 
-mx = x
-if mx < y:
-    mx = y
-if mx < z:
-    mx = z
+mn = reduce(lambda x,y: x if x< y else y, nums)
+mx = reduce(lambda x, y : x if x > y else y, nums)
 
-print(mn, mx)
+print(f"{mn} {mx}")
