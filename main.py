@@ -37,6 +37,25 @@
 # q.pop()
 # print(q)
 
-model_accuracy = 0.83333
+# model_accuracy = 0.83333
+#
+# print(f"the model accuracy is {model_accuracy:.2%}")
 
-print(f"the model accuracy is {model_accuracy:.2%}")
+# from functools import reduce
+# n = int(input())
+# nums = list(map(float, input().split()))
+#
+# res = reduce(lambda x, y: x+y, nums)
+# ans = res/n
+# print(("{:.7f}".format(ans)))
+
+n = int(input())
+x = list(map(int, input().split()))
+y = list(map(int, input().split()))
+
+comb = y+x
+
+for i in comb:
+    print(i, end = " ")
+
+
